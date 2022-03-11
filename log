@@ -24,3 +24,16 @@ In file included from test.c:5:
 1 error generated.
 Compilation failed
 44492de
+Fri Mar 11 18:37:28 -03 2022: 
+ exercises.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+./exercises.c:83:21: error: incompatible pointer types assigning to 'int *' from 'Vector *' [-Werror,-Wincompatible-pointer-types]
+   tipoVector.datos = (Vector *) calloc(n, sizeof(Vector));
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./exercises.c:84:11: error: address of stack memory associated with local variable 'vectorLocal' returned [-Werror,-Wreturn-stack-address]
+   return vectorLocal;
+          ^~~~~~~~~~~
+2 errors generated.
+Compilation failed
+f0d6a6d
