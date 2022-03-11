@@ -2,3 +2,9 @@ Fri Mar 11 17:04:01 -03 2022:
  tests:  0|7
 total_score: 0/70
 2d4eac9
+Fri Mar 11 17:31:55 -03 2022: 
+ exercises.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+ tests:  2|5
+total_score: 20/70
+f54ebfb
