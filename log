@@ -14,3 +14,13 @@ Fri Mar 11 17:41:27 -03 2022:
  tests:  2|5
 total_score: 20/70
 ac46879
+Fri Mar 11 17:52:55 -03 2022: 
+ exercises.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+./exercises.c:80:9: error: unused variable 'vectorLocal' [-Werror,-Wunused-variable]
+   int *vectorLocal = (int*) calloc(n, sizeof(int));
+        ^
+1 error generated.
+Compilation failed
+44492de
