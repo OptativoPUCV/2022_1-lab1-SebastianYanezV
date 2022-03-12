@@ -278,3 +278,13 @@ In file included from test.c:5:
 3 errors generated.
 Compilation failed
 4c6cf1a
+Sat Mar 12 16:41:03 -03 2022: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+./exercises.c:69:1: error: non-void function does not return a value [-Werror,-Wreturn-type]
+}
+^
+1 error generated.
+Compilation failed
+2f174e1
