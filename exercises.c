@@ -83,10 +83,8 @@ typedef struct {
 
 Vector * crearVector(int n) 
 {
-   Vector vector[n];
-   
-   /*= (Vector *) malloc(n * sizeof(Vector));
-   if (vector == NULL) exit(1);*/
+   Vector *vector = (Vector *) malloc(sizeof(Vector));
+   if (vector == NULL) exit(1);
 
    vector->datos = (int *) calloc(n, sizeof(int));
    if (vector->datos == NULL) exit(1);
@@ -103,10 +101,7 @@ la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) 
 {
-   for (i = 0 ; i < v->capacidad ; i++)
-   {
-      v->datos[i] = valor;
-   }
+   v->datos[i] = valor;
 }
 
 /*
@@ -126,7 +121,7 @@ actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) 
 {
-
+   
 }
 
 /*
