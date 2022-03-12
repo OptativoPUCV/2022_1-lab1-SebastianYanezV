@@ -324,3 +324,9 @@ In file included from test.c:5:
 3 errors generated.
 Compilation failed
 647cc17
+Sat Mar 12 17:22:00 -03 2022: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  6|2
+total_score: 50/70
+3e4ede6
