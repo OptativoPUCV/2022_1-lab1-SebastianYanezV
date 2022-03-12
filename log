@@ -204,3 +204,13 @@ In file included from test.c:5:
 2 errors generated.
 Compilation failed
 f816324
+Sat Mar 12 15:54:01 -03 2022: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+./exercises.c:69:1: error: non-void function does not return a value [-Werror,-Wreturn-type]
+}
+^
+1 error generated.
+Compilation failed
+e048407
