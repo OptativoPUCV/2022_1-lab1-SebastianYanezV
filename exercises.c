@@ -59,14 +59,13 @@ typedef struct {
 
 Persona* crearPersona(char nombre[], char rut[], int edad) 
 {
-   /*Persona *datos = (Persona*) malloc( 1 * sizeof(Persona));
+   Persona *datos = (Persona*) malloc(sizeof(Persona));
 
    strcpy(datos->nombre, nombre);
    strcpy(datos->rut, rut);
    strcpy(datos->edad, edad);
 
-   return datos;*/
-   return NULL;
+   return datos;
 }
 
 /*
@@ -122,7 +121,10 @@ actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) 
 {
-   
+   for (int i = 0 ; i < a->capacidad ; i++)
+   {
+      c->datos[i] = a->datos[i] + b->datos[i];
+   }
 }
 
 /*
