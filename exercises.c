@@ -59,7 +59,7 @@ typedef struct {
 
 Persona* crearPersona(char nombre[], char rut[], int edad) 
 {
-   Persona *datos;
+   Persona *datos = (Persona*) malloc(sizeof(Persona));
 
    strcpy(datos->nombre, nombre);
    strcpy(datos->rut, rut);
@@ -83,15 +83,15 @@ typedef struct {
 
 Vector * crearVector(int n) 
 {
-   Vector *datosVector;
-   datosVector = (Vector *) malloc(n * sizeof(Vector));
-   if (datosVector == NULL) exit(1);
+   Vector *vector = (Vector *) malloc(n * sizeof(Vector));
+   if (vector == NULL) exit(1);
 
-   datosVector->capacidad = n;
+   vector->datos = (int *) calloc(n, sizeof(int));
+   if (vector->datos == NULL) exit(1);
 
-   datosVector->datos = (Vector *) calloc(n, sizeof(Vector));
+   vector->capacidad = n;
 
-   return datosVector;
+   return vector;
 }
 
 /*
@@ -101,7 +101,10 @@ la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) 
 {
-   v->datos[i] = valor;
+   for (i = 0 ; i < v->capacidad ; i++)
+   {
+      v->datos[i] = valor;
+   }
 }
 
 /*
@@ -109,8 +112,9 @@ Ejercicio 6.
 Programe la función int obtenerValor(Vector * v, int i), 
 la cual retorna el valor en la posición i del vector v.
 */
-int obtenerValor(Vector * v, int i) {
-   return 0;
+int obtenerValor(Vector * v, int i) 
+{
+   return v->datos[i];
 }
 
 /*
@@ -118,7 +122,8 @@ Ejercicio 7.
 Función que suma los vectores `a` y `b` y 
 actualiza el vector `c` con el resultado de la suma.
 */
-void sumaV(Vector * a, Vector * b, Vector * c) {
+void sumaV(Vector * a, Vector * b, Vector * c) 
+{
 
 }
 
@@ -127,6 +132,7 @@ Ejercicio 8.
 Use las operaciones implementadas de vectores para 
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
-void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
+void sumaV2(int a1, int a2, int b1, int b2, Vector *c)
+{
 
 }
