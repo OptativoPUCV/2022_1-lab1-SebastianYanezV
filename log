@@ -214,3 +214,37 @@ In file included from test.c:5:
 1 error generated.
 Compilation failed
 e048407
+Sat Mar 12 15:58:35 -03 2022: 
+ exercises.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+./exercises.c:66:11: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const void *' [-Werror,-Wint-conversion]
+   strcpy(datos->edad, edad);
+          ^~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:61: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                                          ^~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h:39:54: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                     ^~~~~~
+In file included from test.c:5:
+./exercises.c:66:11: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+   strcpy(datos->edad, edad);
+          ^~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:27: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                        ^~~~
+In file included from test.c:5:
+./exercises.c:66:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
+   strcpy(datos->edad, edad);
+                       ^~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:33: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                              ^~~~~~~~~~~
+In file included from test.c:5:
+./exercises.c:96:11: error: address of stack memory associated with local variable 'vector' returned [-Werror,-Wreturn-stack-address]
+   return vector;
+          ^~~~~~
+4 errors generated.
+Compilation failed
+e02f60c
