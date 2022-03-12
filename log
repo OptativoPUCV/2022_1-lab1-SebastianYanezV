@@ -78,3 +78,44 @@ In file included from test.c:5:
 5 errors generated.
 Compilation failed
 11211ba
+Sat Mar 12 12:04:28 -03 2022: 
+ exercises.c | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+./exercises.c:66:11: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const void *' [-Werror,-Wint-conversion]
+   strcpy(datos->edad, edad);
+          ^~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:61: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                                                          ^~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h:39:54: note: expanded from macro '__darwin_obsz'
+#define __darwin_obsz(object) __builtin_object_size (object, _USE_FORTIFY_LEVEL > 1 ? 1 : 0)
+                                                     ^~~~~~
+In file included from test.c:5:
+./exercises.c:66:11: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+   strcpy(datos->edad, edad);
+          ^~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:27: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                        ^~~~
+In file included from test.c:5:
+./exercises.c:66:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
+   strcpy(datos->edad, edad);
+                       ^~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:33: note: expanded from macro 'strcpy'
+                __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+                                              ^~~~~~~~~~~
+In file included from test.c:5:
+./exercises.c:68:11: error: variable 'datos' is uninitialized when used here [-Werror,-Wuninitialized]
+   return datos;
+          ^~~~~
+./exercises.c:62:18: note: initialize the variable 'datos' to silence this warning
+   Persona *datos;
+                 ^
+                  = NULL
+./exercises.c:92:23: error: incompatible pointer types assigning to 'int *' from 'Vector *' [-Werror,-Wincompatible-pointer-types]
+   datosVector->datos = (Vector *) calloc(n, sizeof(Vector));
+                      ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5 errors generated.
+Compilation failed
+14c9671
