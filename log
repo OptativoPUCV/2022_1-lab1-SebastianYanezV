@@ -288,3 +288,9 @@ In file included from test.c:5:
 1 error generated.
 Compilation failed
 2f174e1
+Sat Mar 12 16:41:41 -03 2022: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  5|3
+total_score: 40/70
+8551452
